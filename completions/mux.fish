@@ -1,0 +1,1 @@
+/home/seanh/.gem/ruby/2.3.0/gems/tmuxinator-0.9.0/completion/mux.fish

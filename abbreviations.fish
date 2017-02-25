@@ -8,7 +8,7 @@ abbr v vagrant
 abbr encrypt pg --symmetric
 abbr decrypt gpg
 abbr mirror wget -mkp --random-wait
-abbr rsync rsync -avzchiP
+abbr rsync rsync --archive --verbose --human-readable --itemize-changes --progress --compress --checksum
 abbr rsync_to_fat32 rsync -cvrlhziDP
 abbr untar tar -zxvf
 abbr htest tox -- --strict --verbose --showlocals

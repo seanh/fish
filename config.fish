@@ -4,6 +4,7 @@ umask 0022
 # That way sourcing this file doesn't duplicat them.
 set -x PATH ~/.dwm/bin $PATH
 set -x PATH ~/bin $PATH
+set -x PATH ~/Scripts $PATH
 set -x PATH ~/.local/bin $PATH
 set -x PATH ~/.gem/ruby/2.3.0/bin $PATH
 set -x PATH ~/npm/bin $PATH

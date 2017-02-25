@@ -32,7 +32,5 @@ function fish_prompt -d "Write out the prompt"
     set_color normal
 
     # Print the path.
-    printf "%s " (prompt_pwd)
-
-    printf "\n\$ "
+    printf "\n%s> " (prompt_pwd)
 end

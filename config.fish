@@ -23,12 +23,6 @@ if python -c "import virtualfish" 2> /dev/null
 end
 set -x PROJECT_HOME ~/Projects
 
-# These speed up installing global requirements in new virtualenvs.
-set -x PIP_USE_WHEEL true
-set -x PIP_WHEEL_DIR ~/.pip/wheels
-set -x PIP_FIND_LINKS ~/.pip/wheels
-set -x PIP_DOWNLOAD_CACHE ~/.pip/cache
-
 source ~/.config/fish/abbreviations.fish
 
 alias standup=~/Gists/standup/standup.py

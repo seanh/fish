@@ -18,8 +18,9 @@ set -x TODOTXT_CFG_FILE $HOME/.todo/todo.cfg
 set -x VIRTUAL_ENV_DISABLE_PROMPT true
 
 # Virtualfish
-# TODO: Eval this only once, and not on re-sourcing this file?
-eval (python -m virtualfish projects)
+if python -c "import virtualfish" 2> /dev/null
+    eval (python -m virtualfish projects)
+end
 set -x PROJECT_HOME ~/Projects
 
 # These speed up installing global requirements in new virtualenvs.

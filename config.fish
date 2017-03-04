@@ -7,7 +7,10 @@ add_to_path ~/.local/bin
 add_to_path ~/.gem/ruby/2.3.0/bin
 add_to_path ~/npm/bin
 
-set -x EDITOR vim
+if type -q vim
+  set -x EDITOR vim
+end
+
 set -x TODOTXT_CFG_FILE $HOME/.todo/todo.cfg
 
 # Tell virtualenv not to modify my shell prompt

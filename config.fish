@@ -33,4 +33,6 @@ source ~/.config/fish/abbreviations.fish
 
 alias standup=~/Gists/standup/standup.py
 
-eval (direnv hook fish)
+if type -q direnv
+    eval (direnv hook fish)
+end

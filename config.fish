@@ -1,13 +1,11 @@
 umask 0022
 
-# TODO: Only add paths if they're not in there already.
-# That way sourcing this file doesn't duplicat them.
-set -x PATH ~/.dwm/bin $PATH
-set -x PATH ~/bin $PATH
-set -x PATH ~/Scripts $PATH
-set -x PATH ~/.local/bin $PATH
-set -x PATH ~/.gem/ruby/2.3.0/bin $PATH
-set -x PATH ~/npm/bin $PATH
+add_to_path ~/.dwm/bin
+add_to_path ~/bin
+add_to_path ~/Scripts
+add_to_path ~/.local/bin
+add_to_path ~/.gem/ruby/2.3.0/bin
+add_to_path ~/npm/bin
 
 set -x EDITOR vim
 set -x TODOTXT_CFG_FILE $HOME/.todo/todo.cfg

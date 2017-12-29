@@ -20,3 +20,4 @@ abbr sp standup print
 abbr sl standup ls
 abbr shred shred -vu
 abbr docker-compose sudo /home/seanh/.local/bin/docker-compose
+abbr gedit gedit --new-window

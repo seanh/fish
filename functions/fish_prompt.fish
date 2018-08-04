@@ -10,6 +10,12 @@ function fish_prompt -d "Write out the prompt"
         set_color normal
     end
 
+    # Print the number of uncompleted todo.txt tasks.
+    set -l todos (t -p ls | head -n -2 | wc -l)
+    if test $todos -ne 0
+      printf "[%s] " (t -p ls | head -n -2 | wc -l)
+    end
+
     # Print the name of the active Python virtual environment if any.
     if set -q VIRTUAL_ENV
         set_color blue
@@ -32,5 +38,7 @@ function fish_prompt -d "Write out the prompt"
     set_color normal
 
     # Print the path.
-    printf "%s> " (prompt_pwd)
+    printf "%s" (prompt_pwd)
+
+    printf "> "
 end

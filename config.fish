@@ -24,6 +24,7 @@ end
 set -x PROJECT_HOME ~/Projects
 
 source ~/.config/fish/abbreviations.fish
+source ~/.config/fish/aliases.fish
 
 alias standup=~/Gists/standup/standup.py
 

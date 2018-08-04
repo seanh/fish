@@ -1,8 +1,8 @@
 umask 0022
 
-add_to_path ~/.dwm/bin
+add_to_path ~/Projects/dwm/bin
 add_to_path ~/bin
-add_to_path ~/Scripts
+add_to_path ~/Projects/Scripts
 add_to_path ~/.local/bin
 add_to_path ~/.gem/ruby/2.3.0/bin
 add_to_path ~/npm/bin

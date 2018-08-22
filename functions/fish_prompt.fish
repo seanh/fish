@@ -10,6 +10,12 @@ function fish_prompt -d "Write out the prompt"
         set_color normal
     end
 
+    # Print the number of uncompleted todo.txt tasks.
+    set -l todos (t -p ls | head -n -2 | wc -l)
+    if test $todos -ne 0
+      printf "[%s] " (t -p ls | head -n -2 | wc -l)
+    end
+
     # Print the name of the active Python virtual environment if any.
     if set -q VIRTUAL_ENV
         set_color blue
@@ -31,8 +37,7 @@ function fish_prompt -d "Write out the prompt"
     set -g __fish_git_prompt_color_branch green
     set -g __fish_git_prompt_color_flags green
     set -g __fish_git_prompt_color_upstream green
-    set -g __fish_git_prompt_showdirtystate yes  # Shows + and * for staged and unstaged changes.
-    set -g __fish_git_prompt_showuntrackedfiles yes  # Shows % if there are untracked files.
+    set -g __fish_git_prompt_showstashstate yes  # Show a "$" if something is stashed.
     set -g __fish_git_prompt_shorten_branch_len '10'
     __fish_git_prompt "%s "
     set_color normal

@@ -20,3 +20,4 @@ abbr sp standup print
 abbr sl standup ls
 abbr shred shred -vu
 abbr gedit gedit --new-window
+abbr title set FISH_TITLE

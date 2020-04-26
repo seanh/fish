@@ -56,6 +56,12 @@ if status is-interactive
     end
 end
 
+# pyenv
+set -x PYENV_ROOT $HOME/.pyenv
+add_to_path ~/.pyenv/bin
+status --is-interactive; and pyenv init - | source
+status --is-interactive; and pyenv virtualenv-init - | source
+
 set -x FZF_DEFAULT_COMMAND 'rg --files'
 set -x FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
 set -x FZF_DEFAULT_OPTS '--multi --preview "[[ $(file --mime {}) =~ binary ]] && echo {} is a binary file || (bat --style=plain --color=always {} || highlight -O ansi -l {} || coderay {} || rougify {} || cat {}) 2> /dev/null | head -500"'

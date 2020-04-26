@@ -66,3 +66,5 @@ set -x FZF_DEFAULT_COMMAND 'rg --files'
 set -x FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
 set -x FZF_DEFAULT_OPTS '--multi --preview "[[ $(file --mime {}) =~ binary ]] && echo {} is a binary file || (bat --style=plain --color=always {} || highlight -O ansi -l {} || coderay {} || rougify {} || cat {}) 2> /dev/null | head -500"'
 set -x FZF_CTRL_T_OPTS $FZF_DEFAULT_OPTS
+
+set -x RIPGREP_CONFIG_PATH ~/.ripgrep/rc

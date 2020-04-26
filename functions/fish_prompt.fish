@@ -17,10 +17,8 @@ function fish_prompt -d "Write out the prompt"
         set_color normal
     end
 
-    # Print the path if it's not ~.
-    if [ (pwd) != ~ ]
-      printf '%s ' (prompt_pwd)
-    end
+    # Print the path.
+    printf '%s' (prompt_pwd)
 
     # Print the name of the current git branch, if in a git repo.
     set -g __fish_git_prompt_color green
@@ -32,7 +30,7 @@ function fish_prompt -d "Write out the prompt"
     set -g __fish_git_prompt_color_flags green
     set -g __fish_git_prompt_color_upstream green
     set -g __fish_git_prompt_shorten_branch_len '10'
-    __fish_git_prompt "%s "
+    __fish_git_prompt " %s"
     set_color normal
 
     # Print a $ symbol.

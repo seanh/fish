@@ -33,6 +33,6 @@ function fish_prompt -d "Write out the prompt"
     __fish_git_prompt " %s"
     set_color normal
 
-    # Print a $ symbol.
-    echo '$ '
+    # Print a > symbol.
+    echo '> '
 end

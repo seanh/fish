@@ -18,9 +18,7 @@ set -x TODOTXT_CFG_FILE $HOME/.todo/todo.cfg
 set -x VIRTUAL_ENV_DISABLE_PROMPT true
 
 # Virtualfish
-if python -c "import virtualfish" 2> /dev/null
-    eval (python -m virtualfish projects)
-end
+eval (python -m virtualfish projects)
 set -x PROJECT_HOME ~/Projects
 
 source ~/.config/fish/abbreviations.fish

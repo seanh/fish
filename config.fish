@@ -68,3 +68,5 @@ set -x FZF_DEFAULT_OPTS '--multi --preview "[[ $(file --mime {}) =~ binary ]] &&
 set -x FZF_CTRL_T_OPTS $FZF_DEFAULT_OPTS
 
 set -x RIPGREP_CONFIG_PATH ~/.ripgrep/rc
+
+register-python-argcomplete --shell fish pipx | .

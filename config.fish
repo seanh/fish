@@ -56,10 +56,12 @@ if status is-interactive
 end
 
 # pyenv
-set -x PYENV_ROOT $HOME/.pyenv
 add_to_path ~/.pyenv/bin
-status --is-interactive; and pyenv init - | source
-status --is-interactive; and pyenv virtualenv-init - | source
+if command -v pyenv > /dev/null 2<&1
+  set -x PYENV_ROOT $HOME/.pyenv
+  status --is-interactive; and pyenv init - | source
+  status --is-interactive; and pyenv virtualenv-init - | source
+end
 
 set -x FZF_DEFAULT_COMMAND 'rg --files'
 set -x FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND

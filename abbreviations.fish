@@ -9,7 +9,7 @@ abbr encrypt pg --symmetric
 abbr decrypt gpg
 abbr mirror wget -mkp --random-wait
 abbr rsync rsync --archive --verbose --human-readable --itemize-changes --progress --compress --checksum
-abbr rsync_to_fat32 rsync -cvrlhziDP
+abbr rsync_to_fat32 rsync --archive --no-perms --no-group --no-owner --modify-window 1 --verbose --human-readable --itemize-changes
 abbr untar tar -zxvf
 abbr htest tox -- --strict --verbose --showlocals
 abbr gvr gvim --remote-silent

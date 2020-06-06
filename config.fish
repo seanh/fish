@@ -70,4 +70,6 @@ set -x FZF_CTRL_T_OPTS $FZF_DEFAULT_OPTS
 
 set -x RIPGREP_CONFIG_PATH ~/.ripgrep/rc
 
-register-python-argcomplete --shell fish pipx | .
+if command -v pipx > /dev/null 2<&1
+  register-python-argcomplete --shell fish pipx | .
+end

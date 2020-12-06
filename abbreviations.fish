@@ -10,3 +10,4 @@ abbr untar tar -zxvf
 abbr gvr gvim --remote-silent
 abbr xclip 'xclip -selection clipboard -i'
 abbr title set FISH_TITLE
+abbr st st -c st

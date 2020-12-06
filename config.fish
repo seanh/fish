@@ -2,7 +2,7 @@ umask 0022
 
 add_to_path ~/Projects/dwm/bin
 add_to_path ~/bin
-add_to_path ~/Projects/Scripts
+add_to_path ~/Scripts
 add_to_path ~/.local/bin
 
 if type -q vim
